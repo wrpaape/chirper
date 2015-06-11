@@ -1,0 +1,18 @@
+<h1><%= "#{@user.handle}'s Chirps"%></h1>
+<% @chirps.each do |chirp| %>
+<p>
+  <strong>Title:</strong>
+  <%= chirp.title %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= chirp.topic %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= chirp.body %>
+</p>
+<p>::::::::::::::::::::::::::::::</p>
+<% end %>

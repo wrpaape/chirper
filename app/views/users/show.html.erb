@@ -17,5 +17,5 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
-<td><%= link_to "See #{@user.handle}'s chirps" %></td>
-<td><%= link_to "See #{@user.handle}'s chirps" %></td>
+<p><%= link_to "#{@user.handle}'s chirps", {:controller => "users", :action => "show_chirps", :user => @user } %></p>
+<p><%= link_to "#{@user.handle}'s comments", {:controller => "users", :action => "show_comments", :user => @user }  %></p>

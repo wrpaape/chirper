@@ -62,11 +62,13 @@ class UsersController < ApplicationController
   end
 
   def show_chirps
-    @chirps = User.find(params[:id]).chirps
+    @user = User.find(params[:user])
+    @chirps = @user.chirps
   end
 
   def show_comments
-    @comments = User.find(params[:id]).comments
+    @user = User.find(params[:user])
+    @comments = @user.comments
   end
 
   private

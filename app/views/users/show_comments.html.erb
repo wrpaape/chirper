@@ -1,0 +1,26 @@
+<h1><%= "#{@user.handle}'s Comments"%></h1>
+<% @comments.each do |comment| %>
+
+<p>
+  <strong>
+    <%= "In Response to #{@comment.chirp.user.handle}'s Chirp:" %>
+  </strong>
+    <%= comment.chirp.title %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= comment.rating.to_s + "/5" %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= comment.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= comment.body %>
+</p>
+<p>::::::::::::::::::::::::::::::</p>
+<% end %>
